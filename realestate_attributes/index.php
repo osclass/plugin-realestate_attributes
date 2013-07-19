@@ -384,7 +384,7 @@ function realestate_pre_item_post() {
 
 function realestate_item_style(){
     //osc_plugin_url(__FILE__).'img/
-    echo "<link href=\"".osc_plugin_url(__FILE__)."/css/style.css\" rel=\"stylesheet\" type=\"text/css\" />";
+    echo "<link href=\"".osc_plugin_url(__FILE__)."css/style.css\" rel=\"stylesheet\" type=\"text/css\" />";
 }
 
 // This is needed in order to be able to activate the plugin
