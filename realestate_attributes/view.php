@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('OC_ADMIN') || OC_ADMIN!==true) exit('Access is not allowed.');
 /*
  *      OSCLass – software for creating and publishing online classified
  *                           advertising platforms
@@ -34,10 +34,10 @@ if(Params::getParam('plugin_action')!='') {
         osc_add_flash_warning_message(__('Settings saved!','realestate_attributes'),'realestate_attributes');
     }
     osc_reset_preferences();
-    $insertion = osc_get_preference('insertion','realestate_attributes');
-    $show_filters = osc_get_preference('show_filters','realestate_attributes');
-    $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'));
 }
+$insertion = osc_get_preference('insertion','realestate_attributes');
+$show_filters = osc_get_preference('show_filters','realestate_attributes');
+$custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'));
 ?>
 <?php
 osc_show_flash_message('realestate_attributes');

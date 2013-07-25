@@ -1,4 +1,4 @@
-<?php if (!defined('OC_ADMIN') || OC_ADMIN!==true) exit('Access is not allowed.');
+<?php
 function get_realestate_attributes(){
     $locale = osc_current_user_locale();
     $return = array('attributes','other_attributes');
@@ -177,7 +177,7 @@ function table_realestate_attributes(){
 }
 function table_realestate_other_attributes(){ 
     $detail = get_realestate_attributes();
-    if($detail['other_attributes']){
+    if(isset($detail['other_attributes']) && is_array($detail['other_attributes'])){
     ?>
     <h4><?php _e('Other characteristics', 'realestate_attributes'); ?></h4>
     <ul class="list-other-attributes">

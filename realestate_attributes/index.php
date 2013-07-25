@@ -3,7 +3,7 @@
 Plugin Name: Real state attributes
 Plugin URI: http://www.osclass.org/
 Description: This plugin extends a category of items to store real estate attributes such as square feets, number of bathrooms, garage, and so on.
-Version: 3.2.4
+Version: 3.2.5
 Author: OSClass
 Author URI: http://www.osclass.org/
 Short Name: realestate_plugin
@@ -225,7 +225,7 @@ function _prepareLocales()
 }
 
 function realestate_form_post($item) {
-    $catId = $item['fk_i_cateogry_id'];
+    $catId = $item['fk_i_category_id'];
     $item_id = $item['pk_i_id'];
     // We received the categoryID and the Item ID
     if ($catId!=null) {
@@ -265,7 +265,7 @@ function realestate_item_edit($catId = null, $item_id = null) {
 }
 
 function realestate_item_edit_post($item) {
-    $catId = $item['fk_i_cateogry_id'];
+    $catId = $item['fk_i_category_id'];
     $item_id = $item['pk_i_id'];
     // We received the categoryID and the Item ID
     if ($catId!=null) {
@@ -307,10 +307,11 @@ function realestate_admin_menu() {
     } else {
         osc_add_admin_submenu_divider('plugins', __('Realestate plugin', 'realestate_attributes'), 'realestate_attributes', 'administrator');
         osc_add_admin_submenu_page('plugins', __('Configure plugin', 'realestate_attributes'), osc_admin_configure_plugin_url("realestate_attributes/index.php"), 'realestate_settings', 'administrator');
-        osc_add_admin_submenu_page('plugins', __('Property types', 'realestate_attributes'), osc_admin_configure_plugin_url("realestate_attributes/conf.php"), 'realestate_conf', 'administrator');
-        osc_add_admin_submenu_page('plugins', __('View options', 'realestate_attributes'), osc_admin_configure_plugin_url("realestate_attributes/view.php"), 'realestate_view', 'administrator');
+        osc_add_admin_submenu_page('plugins', __('Property types', 'realestate_attributes'), osc_admin_render_plugin_url("realestate_attributes/conf.php"), 'realestate_conf', 'administrator');
+        osc_add_admin_submenu_page('plugins', __('View options', 'realestate_attributes'), osc_admin_render_plugin_url("realestate_attributes/view.php"), 'realestate_view', 'administrator');
     }
 }
+
 
 function realestate_admin_configuration() {
     // Standard configuration page for plugin which extend item's attributes

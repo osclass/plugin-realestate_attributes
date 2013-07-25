@@ -1,6 +1,10 @@
 Changelog Real estate attributes
 ================================
 
+##version 3.2.5 - 25/07/2013
+
+* Minor fixes
+
 ##version 3.2.4 - 16/07/2013
 
 * Updated to Osclass 3.2

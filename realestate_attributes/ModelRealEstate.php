@@ -111,10 +111,6 @@
             $this->dao->query(sprintf('DROP TABLE %s', $this->getTable_HouseAttr()) ) ;
             $this->dao->query(sprintf('DROP TABLE %s', $this->getTable_HouseAttrDesc()) ) ;
             $this->dao->query(sprintf('DROP TABLE %s', $this->getTable_HousePropertyType()) ) ;
-            
-            if( $error_num > 0 ) {
-                throw new Exception($this->dao->getErrorLevel().' - '.$this->dao->getErrorDesc());
-            }
         }
         
         /**

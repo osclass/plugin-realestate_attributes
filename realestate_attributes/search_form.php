@@ -109,7 +109,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             </select>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['p_type'])){ ?>
     <div class="row one_input">
         <p>
@@ -124,7 +124,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             </div>
         </p>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['numFloor'])){ ?>
     <div class="row one_input">
         <h6 for="numFloor"><?php _e('Num. Floors Range', 'realestate_attributes'); ?></h6>
@@ -133,7 +133,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="floor-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['rooms'])){ ?>
     <div class="row one_input">
         <p>
@@ -144,7 +144,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="room-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['bathrooms'])){ ?>
     <div class="row one_input">
         <p>
@@ -155,7 +155,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="bathroom-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['garages'])){ ?>
     <div class="row one_input">
         <p>
@@ -166,7 +166,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="garage-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['year'])){ ?>
     <div class="row one_input">
         <p>
@@ -177,7 +177,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="year-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['sq'])){ ?>
     <div class="row one_input">
         <p>
@@ -188,7 +188,7 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             <div id="sq-range"></div>
         </div>
     </div>
-    <?php } ?>
+    <?php } ?>
     <?php if(isset($custom['other'])){ ?>
     <div class="row checkboxes">
         <h6><?php _e('Other characteristics', 'realestate_attributes'); ?></h6>
@@ -219,5 +219,5 @@ $custom = unserialize(osc_get_preference('custom-filter','realestate_attributes'
             </li>
         </ul>
     </div>
-    <?php } ?>
+    <?php } ?>
 </fieldset>
